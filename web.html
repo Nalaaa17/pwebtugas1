@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalaaa</title>
+</head>
+<script>
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        let header = document.querySelector("header");
+
+        if (prevScrollpos > currentScrollPos) {
+            header.style.top = "0"; // Muncul saat scroll ke atas
+        } else {
+            header.style.top = "-150px"; // Hilang saat scroll ke bawah
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+    function showPrestasiMessage(message) {
+    alert(message);
+    document.getElementById("prestasi-message").innerText = message;
+    }
+
+    
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let prestasiImages = document.querySelectorAll(".prestasi-images");
+        let messages = [
+            "Ini Juara Karena HOKI dan Digendong Teman"
+            
+        ];
+
+        prestasiImages.forEach((img, index) => {
+            img.addEventListener("click", function () {
+                showPrestasiMessage(messages[index]);
+            });
+        });
+    });
+</script>
+<body>
+    <header>
+        <h1>Web ini seharusnya tugas pertama untuk mata kuliah Pemrograman Berbasis Website. Disini akan menjelaskan beberapa BIODATA tentang Alan ya wahai kakak kakak yang mengoreksi. Dan ada juga sedikit prestasi yang dimiliki saat menggandrungi hobi yang disukai yaitu E-sport</h1>
+    </header>
+
+    <main>
+        <style>
+            /* CSS untuk gambar */
+            .image-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: 2px solid cyan;
+            }
+
+            /* CSS untuk biodata */
+            .biodata {
+                text-align: center;
+                margin-top: 30px;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+                border-radius: 10px;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+            }
+
+            .biodata h2 {
+                color: cyan;
+                text-transform: uppercase;
+            }
+
+            .biodata, .prestasi {
+                text-align: center;
+                margin-top: 30px;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+                border-radius: 10px;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+            }
+
+            .biodata h2, .prestasi h2 {
+                color: cyan;
+                text-transform: uppercase;
+            }
+        </style>
+
+        <div class="image-container">
+            <img src="alan1.jpg" alt="Gambar 1" width="500" height="300">
+            <img src="alan2.jpg" alt="Gambar 2" width="500" height="300">
+        </div>
+
+        <!-- Tambahan Biodata -->
+        <div class="biodata">
+            <h2>Biodata Alan</h2>
+            <p><strong>Nama:</strong> Alan</p>
+            <p><strong>Umur:</strong> 20 tahun</p>
+            <p><strong>Asal:</strong> Jember</p>
+            <p><strong>TTL:</strong> Jember 17 November 2005</p>
+            <p><strong>Hobi:</strong> Tidur, Foto Kucing, Gaming</p>
+        </div>
+
+        <div class="prestasi-images">
+            <img src="prestrasi1.jpg" alt="Foto Prestasi">
+            <img src="prestasi2.jpg" alt="Foto Prestasi">
+            <img src="prestasi3.jpg" alt="Foto Prestasi">
+            <img src="prestasi4.jpg" alt="Foto Prestasi">
+        </div>
+
+        <div id="prestasi-message" style="text-align:center; color: cyan; margin-top: 20px;"></div>
+
+         <div class="prestasi">  
+            <h2>Prestasi Selama Perkuliahan</h2>
+            <p>Juara 3 PMCC 2023</p>
+            <p>Juara 1 PMCC 2024</p>
+            <p>Juara 2 Forkafest 4.0 2024</p>
+            <p>Juara 1 Kualifikasi Kapolda Jatim Wilayah Situbondo 2024</p>
+        </div>
+    </main>
+</body>
+</html>
