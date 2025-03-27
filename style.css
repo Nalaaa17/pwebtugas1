@@ -1,5 +1,5 @@
 header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,10 +11,10 @@ header {
     justify-content: center;
     align-items: center;
 
-        /* Gambar latar belakang */
-        background-image: url('background.jpg'); /* Pastikan file berada di folder yang benar */
-        background-size: 100% 100%; /* Menyesuaikan gambar agar sesuai dengan header */
-        background-position: center; /* Memastikan gambar selalu di tengah */
+      
+        background-image: url('background.jpg'); 
+        background-size: 100% 100%; 
+        background-position: center; 
         background-repeat: no-repeat;
         
         display: flex;
@@ -46,7 +46,7 @@ h1 {
 }
 
 body {
-    padding-top: 150px; /* Sesuaikan dengan tinggi header */
+    padding-top: 0; /* Sesuaikan dengan tinggi header */
     background-color: black; /* Warna latar belakang */
     display: flex;
     flex-direction: column;
@@ -56,6 +56,13 @@ body {
     padding: 0;
 }
 
+main {
+    margin-top: 160px; /* Memberikan ruang setelah header */
+}
+
+.image-container {
+    margin-top: 20px; /* Memberikan jarak tambahan */
+}
 
 .prestasi-images {
     display: flex;
